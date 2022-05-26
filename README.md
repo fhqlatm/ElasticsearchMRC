@@ -1,6 +1,6 @@
 # **Elasticsearch MRC Task**
 
-## **Elasticsearch 활용 한국어 위키피디아 MRC 태스크**
+### **Elasticsearch 활용 한국어 위키피디아 데이터셋 MRC Task**
 
 ---
 
@@ -8,9 +8,9 @@
 
 - BM25 기반의 [Elasticsearch 7.9.3](https://www.elastic.co/kr/downloads/past-releases/elasticsearch-7-9-3) 검색 모델을 활용
 
-- [Korpora/kowikitext](https://ko-nlp.github.io/Korpora/ko-docs/corpuslist/kowikitext.html) 사용하여 데이터셋 구성
+- [Korpora/kowikitext](https://ko-nlp.github.io/Korpora/ko-docs/corpuslist/kowikitext.html) 기반 데이터셋 구성
 
-- [Kakaobrain/pororo](https://kakaobrain.github.io/pororo/)에서 제공하는 MRC Task 적용
+- [Kakaobrain/pororo](https://kakaobrain.github.io/pororo/) 제공 MRC Task 적용
 
 ---
 
