@@ -1,3 +1,4 @@
 pororo
 elasticsearch==7.9
 Korpora
+wikipedia-api

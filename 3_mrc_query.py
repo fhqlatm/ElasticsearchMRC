@@ -7,7 +7,7 @@ from pororo import Pororo
 def getParser():
     parser = argparse.ArgumentParser()
     parser.add_argument("-query", default='2차 세계대전은 언제 종전되었는가?', type=str)
-    parser.add_argument("-size", default=5, type=int)
+    parser.add_argument("-searchsize", default=5, type=int)
 
     return parser
 
@@ -23,7 +23,7 @@ def main():
     print(f'{Back.RED + Fore.WHITE}Query: {query}')
 
     index_name = 'texts'
-    results = es.search(index=index_name, body={'from':0, 'size':args.size, 'query':{'match':{'text': query}}})
+    results = es.search(index=index_name, body={'from':0, 'size':args.searchsize, 'query':{'match':{'text': query}}})
 
     for i, result in enumerate(results['hits']['hits']):
         id = result['_source']['id']
@@ -42,4 +42,4 @@ def main():
 
 
 if __name__ == "__main__":
-  main()
+    main()

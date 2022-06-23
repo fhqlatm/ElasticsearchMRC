@@ -44,27 +44,37 @@ pip install -r requirements.txt
 python 1_indexing.py
 ```
 
-**4. Test Input Query 수행**
+**4. Test Query 검색**
 
 ```console
-python 2_test_query.py -query '{Input_Query}' -size {Input_Size}
+python 2_test_query.py -query '{Input_Query}' -searchsize {Search_Result_Size}
 ```
 
 - 데이터 집합에 BM25 기반 검색 수행 후 결과 도출
 
-**5. MRC Task Input Query 수행**
+**5. MRC Task Query 검색**
 
 ```console
-python 3_mrc_query.py -query '{Input_Query}' -size {Input_Size}
+python 3_mrc_query.py -query '{Input_Query}' -searchsize {Search_Result_Size}
 ```
 
 - 데이터 집합에 BM25 기반 검색 수행 후 MRC Task 적용
+
+**6. Pseudo Relevance Feedback + MRC Task Query 검색**
+
+```console
+python 4_mrc_query_prf.py -query '{Input_Query}' -searchsize {Search_Result_Size} -expansionsize {Pseudo_Relevance_Feedback_Ratio_Size}
+```
+
+- 데이터 집합에 BM25 기반 검색 수행 후 MRC Task 검색 수행
+
+- Pseudo Relevance Feedback 적용
 
 ---
 
 ## **Result**
 
-**MRC Task 적용**
+**MRC Task Query 검색**
 
 - Query: 2차 세계대전은 언제 종전되었는가?
 
